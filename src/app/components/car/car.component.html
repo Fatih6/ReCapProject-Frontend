@@ -1,0 +1,27 @@
+<div class="accordion-body">
+    <div
+      *ngIf="dataLoaded == false"
+      class="spinner-border text-primary"
+      role="status"
+    >
+      <span class="visually-hidden">Yükleniyor...</span>
+    </div>
+
+    <table *ngIf="dataLoaded == true" class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">MARKA</th>
+            <th scope="col">RENK</th>
+            <th scope="col">GÜNLÜK FİYAT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td scope="row">{{ car.carId }}</td>
+            <td scope="row">{{ car.brandName }}</td>
+            <td scope="row">{{ car.colorName }}</td>
+            <td scope="row">{{ car.dailyPrice }}</td>
+          </tr>
+        </tbody>
+      </table>

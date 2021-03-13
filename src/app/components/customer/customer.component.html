@@ -1,0 +1,28 @@
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-primary"
+  role="status"
+>
+  <span class="visually-hidden">Yükleniyor...</span>
+</div>
+
+<table *ngIf="dataLoaded == true" class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Adı</th>
+      <th scope="col">Soyadı</th>
+      <th scope="col">Email</th>
+      <th scope="col">Şirketi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td scope="row">{{ customer.customerId }}</td>
+      <td scope="row">{{ customer.firstName }}</td>
+      <td scope="row">{{ customer.lastName }}</td>
+      <td scope="row">{{ customer.email }}</td>
+      <td scope="row">{{ customer.companyName }}</td>
+    </tr>
+  </tbody>
+</table>
