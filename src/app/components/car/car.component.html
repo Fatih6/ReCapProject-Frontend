@@ -1,27 +1,28 @@
-<div class="accordion-body">
-    <div
-      *ngIf="dataLoaded == false"
-      class="spinner-border text-primary"
-      role="status"
-    >
-      <span class="visually-hidden">Yükleniyor...</span>
-    </div>
 
-    <table *ngIf="dataLoaded == true" class="table table-hover">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">MARKA</th>
-            <th scope="col">RENK</th>
-            <th scope="col">GÜNLÜK FİYAT</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let car of cars">
-            <td scope="row">{{ car.carId }}</td>
-            <td scope="row">{{ car.brandName }}</td>
-            <td scope="row">{{ car.colorName }}</td>
-            <td scope="row">{{ car.dailyPrice }}</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col" *ngFor="let car of cars">
+    <div class="card h-100">
+      <img
+        src="https://localhost:44336//Images//default.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        
+        <p class="card-text">Brand : {{ car.brandName }}</p>
+        <p class="card-text">Model Year : {{ car.modelYear }}</p>
+        <p class="card-text">Color : {{ car.colorName }}</p>
+        <p class="card-text">Daily Price : {{ car.dailyPrice }} ₺</p>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        <input
+          class="btn btn-primary"
+          type="button"
+          value="Details"
+          routerLink="/cardetails/{{ car.carId }}"
+        />
+        <input class="btn btn-primary" type="button" value="Rent" />
+      </div>
+    </div>
+  </div>
+</div>

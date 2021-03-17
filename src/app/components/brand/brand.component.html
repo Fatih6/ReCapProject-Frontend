@@ -29,7 +29,9 @@
             </div>
   
             <ul *ngIf="dataLoaded == true" class="list-group">
-              <li [class]="getAllBrandClass()" routeLink="/cars">Tüm Markalar
+              <li [class]="getAllBrandClass()" 
+              routeLink="/cars">
+              Tüm Markalar
               </li>
               <li (click)="setCurrentBrand(brand)" 
               routerLink="/car/brand/{{brand.brandId}}"
