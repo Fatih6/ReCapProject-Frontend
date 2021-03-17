@@ -29,7 +29,12 @@
             </div>
   
             <ul *ngIf="dataLoaded == true" class="list-group">
-              <li *ngFor="let brand of brands" class="list-group-item">
+              <li [class]="getAllBrandClass()" routeLink="/cars">Tüm Markalar
+              </li>
+              <li (click)="setCurrentBrand(brand)" 
+              routerLink="/car/brand/{{brand.brandId}}"
+              *ngFor="let brand of brands"
+              [class]="getCurrentBrandClass(brand)">
                 {{ brand.brandName}}
               </li>
             </ul>
@@ -38,3 +43,6 @@
       </div>
     </div>
   </div>
+
+
+  <h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz.</h5>
