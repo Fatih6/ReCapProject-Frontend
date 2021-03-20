@@ -1,4 +1,3 @@
-  
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/car';
@@ -40,7 +39,6 @@ export class CarComponent implements OnInit {
     this.carService.getAllCarDetails().subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
-      this.setPreviewImages(this.cars)
     });
   }
 
@@ -50,19 +48,13 @@ export class CarComponent implements OnInit {
     });
   }
 
-  setPreviewImages(cars:Car[]){
-    cars.forEach(car => {
-      this.carImageService.getCarImageByCarId(car.carId).subscribe((response) => {
-        car.previewImagePath = "https://localhost:44336/" + response.data[0].imagePath;
-      });
-    });
-  }
+
 
   getCarDetails(brandId:number,colorId:number){
     this.carService.getCarDetails(brandId,colorId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
-      this.setPreviewImages(this.cars)
+
     });
   }
 
@@ -70,7 +62,6 @@ export class CarComponent implements OnInit {
     this.carService.getCarDetailsByBrand(brandId).subscribe((response) => {
       this.cars;{{brandId}} response.data;
       this.dataLoaded = true;
-      this.setPreviewImages(this.cars)
     });
   }
 
@@ -78,7 +69,6 @@ export class CarComponent implements OnInit {
     this.carService.getCarDetailsByColor(colorId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
-      this.setPreviewImages(this.cars)
     });
   }
 

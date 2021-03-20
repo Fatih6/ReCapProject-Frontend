@@ -1,5 +1,5 @@
-<div class="col-lg-7 mx-auto">
-  <div id="carImageSlide" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div *ngIf="car" class="col-lg-7 mx-auto">
+  <div  id="carImageSlide" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div
       class="carousel-inner d-flex"
       style="height: 50vh; min-height: 20rem; max-height: 30rem"
@@ -58,11 +58,15 @@
         </tr>
         <tr>
           <th scope="row">Model Yılı</th>
-          <td></td>
+          <td>
+            {{
+              car.modelYear
+            }}
+          </td>
         </tr>
         <tr>
           <th scope="row">Aciklama</th>
-          <td>{{ car.description }}</td>
+          <td>{{ car.descriptions }}</td>
         </tr>
       </tbody>
     </table>
