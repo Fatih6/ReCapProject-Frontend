@@ -1,50 +1,9 @@
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button
-          class="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
-        >
-          MARKALAR
-        </button>
-      </h2>
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse show"
-        aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <div class="accordion-body">
-            <div
-              *ngIf="dataLoaded == false"
-              class="spinner-border text-primary"
-              role="status"
-            >
-              <span class="visually-hidden">Yükleniyor...</span>
-            </div>
   
-            <ul *ngIf="dataLoaded == true" class="list-group">
-              <li [class]="getAllBrandClass()" 
-              routeLink="/cars">
-              Tüm Markalar
-              </li>
-              <li (click)="setCurrentBrand(brand)" 
-              routerLink="/car/brand/{{brand.brandId}}"
-              *ngFor="let brand of brands"
-              [class]="getCurrentBrandClass(brand)">
-                {{ brand.brandName}}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz.</h5>
+<div class="mb-3">
+  <input type="text" [(ngModel)]="filterBrandText" class="form-control" id="filterBrandText" 
+  placeholder="Marka giriniz">
+</div>
+<select class="form-select" [(ngModel)]="currentBrand" #brandSelection (change)="setQueryParams(currentBrand)" aria-label="Default select example">
+  <option [selected]="isAllBrandSelected()" [ngValue]=undefined>Tüm markalar</option>
+  <option [selected]="isCurrentBrand(brand)" *ngFor="let brand of brands | brandFilter:filterBrandText; index as i" [ngValue]="brand">{{brand.brandName}}</option>
+</select>

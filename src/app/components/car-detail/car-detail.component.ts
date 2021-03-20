@@ -12,6 +12,7 @@ import { CarimageService } from 'src/app/services/carimage.service';
 })
 export class CarDetailComponent implements OnInit {
 
+ 
   carImages: CarImage[] = [];
   carImagePaths: string[] = [];
   car: Car;
@@ -25,7 +26,7 @@ export class CarDetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(params=>{
       if(params["carId"]){
         this.getCarDetail(params["carId"])
-        this.getCarImageByCarId(params["carId"])
+        this.getCarImages(params["carId"])
       }
     })
   }
@@ -37,7 +38,7 @@ export class CarDetailComponent implements OnInit {
     });
   }
 
-  getCarImageByCarId(carId:number){
+  getCarImages(carId:number){
     this.carImageService.getCarImageByCarId(carId).subscribe((response) => {
       this.carImages = response.data;
     });

@@ -13,7 +13,9 @@ const routes: Routes = [
   {path:"car/brand/:brandId", component:CarComponent,},
   {path:"car/color/:colorId", component:CarComponent},
   {path:"car/brand/:brandId/color/:colorId", component:CarComponent},
-  {path:"cardetails/:carId", component:CarDetailComponent}
+  {path:"cardetails/:carId", component:CarDetailComponent},
+  {path:"rental/:carId", component:RentalComponent}
+  // {path:"creditcard/:rental", component:CreditCardComponent}
 
 ];
 
