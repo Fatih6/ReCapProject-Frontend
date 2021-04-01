@@ -6,8 +6,9 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/home1.png"></img>
 
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/findeks.png"></img>
 
-
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/NoRentDate.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/profile2.png"></img>
 
@@ -16,11 +17,11 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/kira.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/NoRentDate.png"></img>
+
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/card.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/findeks.png"></img>
+
 
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/Login.png"></img>
