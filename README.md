@@ -14,11 +14,11 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/admin1.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carAdd.png"></img>
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/CarAdd.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carDelete.png"></img>
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/CarDelete.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carUpdate.png"></img>
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/CarUpdate.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/adminBrand.png"></img>
 
