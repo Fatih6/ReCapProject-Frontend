@@ -17,12 +17,14 @@ import { ColorService } from 'src/app/services/color.service';
 export class CarUpdateComponent implements OnInit {
 
   car: Car;
+  cars : Car[];
   carUpdateForm: FormGroup;
   colors: Color[] = [];
   brands: Brand[] = [];
   selectedColor: number;
   selectedBrand: number;
   modelYearList: number[] = [];
+  minFindeksScore:number;
   
 
   constructor(
@@ -43,6 +45,7 @@ export class CarUpdateComponent implements OnInit {
         this.getColors();
         this.getBrands();
         this.createModelYearArray();
+        this.getMinFindeksScore(0);
       }
     });
   }
@@ -66,16 +69,22 @@ export class CarUpdateComponent implements OnInit {
     });
   }
 
+  getMinFindeksScore(minFindeksScore:number){
+    this.carService.getCarsDetails(minFindeksScore).subscribe((response) => {
+      this.cars = response.data;
+    })
+  }
   getCurrentCar(carId: number) {
     this.carService.getCarById(carId).subscribe(response => {
       this.car = response.data;
       this.selectedBrand = this.car.brandId; 
       this.selectedColor = this.car.colorId;
+      this.carUpdateForm.get("minFindeksScore")?.setValue(this.car.minFindeksScore);
       this.carUpdateForm.get('colorId')?.setValue(this.selectedColor);
       this.carUpdateForm.get('brandId')?.setValue(this.selectedBrand);
       this.carUpdateForm.get('carId')?.setValue(this.car.carId);
       this.carUpdateForm.get('dailyPrice')?.setValue(this.car.dailyPrice);
-      this.carUpdateForm.get('description')?.setValue(this.car.descriptions);
+      this.carUpdateForm.get('descriptions')?.setValue(this.car.descriptions);
       this.carUpdateForm.get('modelYear')?.setValue(this.car.modelYear);
     });
   }
@@ -87,7 +96,8 @@ export class CarUpdateComponent implements OnInit {
       brandId: ["", Validators.required],
       modelYear: ["", Validators.required],
       dailyPrice: ["", Validators.required],
-      descriptions: ["", Validators.required]
+      descriptions: ["", Validators.required],
+      minFindeksScore:["",Validators.required]
     });
   }
 

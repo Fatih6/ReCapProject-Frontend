@@ -15,6 +15,7 @@ export class CarComponent implements OnInit {
   cars: Car[] = [];
   carImages: CarImage[] = [];
   dataLoaded = false;
+  MinFindeksScore:number
   constructor(
     private carService: CarService,
     private carImageService: CarimageService,
@@ -30,6 +31,7 @@ export class CarComponent implements OnInit {
         this.getCarDetailsByColor(params["colorId"])
       }else{
         this.getAllCarDetails();
+        this.getCarMinFindeksScore(0);
       }
     })
   }
@@ -41,15 +43,6 @@ export class CarComponent implements OnInit {
       this.dataLoaded = true;
     });
   }
-
-  getCarImages(){
-    this.carImageService.getCarImages().subscribe((response) => {
-      this.carImages = response.data;
-    });
-  }
-
-
-
   getCarDetails(brandId:number,colorId:number){
     this.carService.getCarsDetails(brandId,colorId).subscribe((response) => {
       this.cars = response.data;
@@ -72,4 +65,10 @@ export class CarComponent implements OnInit {
     });
   }
 
+  getCarMinFindeksScore(MinFindeksScore:number){
+    this.carService.getCarsDetails(MinFindeksScore).subscribe((response) =>{
+      this.cars = response.data;
+      this.dataLoaded = true;
+    })
+  }
 }

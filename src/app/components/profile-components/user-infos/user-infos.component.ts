@@ -47,8 +47,6 @@ export class UserInfosComponent implements OnInit {
 
   createCustomerForm(){
     this.customerForm = this.formBuilder.group({
-      phoneNumber: ["", Validators.required],
-      address: ["", Validators.required]
     })
 
   }
