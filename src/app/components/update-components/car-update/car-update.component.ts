@@ -68,7 +68,7 @@ export class CarUpdateComponent implements OnInit {
 
   getCurrentCar(carId: number) {
     this.carService.getCarById(carId).subscribe(response => {
-      this.car = response.data[0];
+      this.car = response.data;
       this.selectedBrand = this.car.brandId; 
       this.selectedColor = this.car.colorId;
       this.carUpdateForm.get('colorId')?.setValue(this.selectedColor);

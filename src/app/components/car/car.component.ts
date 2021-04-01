@@ -51,7 +51,7 @@ export class CarComponent implements OnInit {
 
 
   getCarDetails(brandId:number,colorId:number){
-    this.carService.getCarDetails(brandId,colorId).subscribe((response) => {
+    this.carService.getCarsDetails(brandId,colorId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
 
@@ -59,14 +59,14 @@ export class CarComponent implements OnInit {
   }
 
   getCarDetailsByBrand(brandId:number){
-    this.carService.getCarDetailsByBrand(brandId).subscribe((response) => {
+    this.carService.getCarsDetails(brandId).subscribe((response) => {
       this.cars;{{brandId}} response.data;
       this.dataLoaded = true;
     });
   }
 
   getCarDetailsByColor(colorId:number){
-    this.carService.getCarDetailsByColor(colorId).subscribe((response) => {
+    this.carService.getCarsDetails(colorId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
     });

@@ -29,7 +29,7 @@ export class BrandService {
   deleteBrand(brand:Brand):Observable<ResponseModel>{
     let newPath = this.apiUrl + "delete"
     return this.httpClient
-    .request<ResponseModel>("DELETE",newPath,{
+    .request<ResponseModel>("POST",newPath,{
       body: brand
     })
   }

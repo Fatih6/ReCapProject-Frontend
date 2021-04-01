@@ -7,4 +7,5 @@ export interface Car{
     modelYear?:number;
     dailyPrice?:number;
     descriptions?:string;
+    minFindeksScore?:number;
 }
