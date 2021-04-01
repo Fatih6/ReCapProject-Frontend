@@ -19,7 +19,7 @@
 
 
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/card.png"></img>
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/Card.png"></img>
 
 
 
