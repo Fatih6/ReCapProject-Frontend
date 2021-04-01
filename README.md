@@ -18,7 +18,7 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/CarDelete.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/updatecar.png"></img>
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carUpdate.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/adminBrand.png"></img>
 
