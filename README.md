@@ -12,11 +12,6 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/findeks.png"></img>
 
-
-
-
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/kira.png"></img>
-
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/Card.png"></img>
 
 
