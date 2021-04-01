@@ -2,9 +2,10 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/home.png"></img>
 
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carDetail.png"></img>
+
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/home1.png"></img>
 
-<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carDetail.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/LoginandRegister.png"></img>
 
