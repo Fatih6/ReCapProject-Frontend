@@ -2,11 +2,9 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/home.png"></img>
 
-
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/home1.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carDetail.png"></img>
-
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/NoRentDate.png"></img>
 
@@ -14,6 +12,15 @@
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/Card.png"></img>
 
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/admin1.png"></img>
+
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carAdd.png"></img>
+
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carDelete.png"></img>
+
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/carUpdate.png"></img>
+
+<img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/adminBrand.png"></img>
 
 <img src="https://github.com/Fatih6/ReCapProject-Frontend/blob/main/readme-images/LoginandRegister.png"></img>
 
